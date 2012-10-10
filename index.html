@@ -1,36 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Dropbox-js : JavaScript Library for the Dropbox API" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Dropbox-js by cleberar</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Dropbox-js</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1>Dropbox-js</h1>
+        <p>JavaScript Library for the Dropbox API</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/irachex/dropbox-js">View on GitHub</a>
+        <p class="view"><a href="https://github.com/cleberar/dropbox-js">View the Project on GitHub <small>cleberar/dropbox-js</small></a></p>
 
-          <h1 id="project_title">Dropbox-js</h1>
-          <h2 id="project_tagline">JavaScript Library for the Dropbox API</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/irachex/dropbox-js/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/irachex/dropbox-js/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+        <ul>
+          <li><a href="https://github.com/cleberar/dropbox-js/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/cleberar/dropbox-js/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/cleberar/dropbox-js">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
         <p>API version: 1</p>
 
 <h2>How to Use</h2>
@@ -41,22 +38,16 @@
 
 <p>include these library</p>
 
-<div class="highlight">
-<pre> <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"jquery-1.7.2.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="highlight"><pre> <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"jquery-1.7.2.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"oauth.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"sha1.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"dropbox.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</pre>
-</div>
-
+</pre></div>
 
 <p>setup your consumer key and consumer secret</p>
 
-<div class="highlight">
-<pre><span class="nx">dropbox</span><span class="p">.</span><span class="nx">setup</span><span class="p">(</span><span class="nx">API_KEY</span><span class="p">,</span> <span class="nx">API_SECRET</span><span class="p">);</span>
-</pre>
-</div>
-
+<div class="highlight"><pre><span class="nx">dropbox</span><span class="p">.</span><span class="nx">setup</span><span class="p">(</span><span class="nx">API_KEY</span><span class="p">,</span> <span class="nx">API_SECRET</span><span class="p">);</span>
+</pre></div>
 
 <h4>Step 2</h4>
 
@@ -64,37 +55,25 @@
 
 <p>a) Get a request token</p>
 
-<div class="highlight">
-<pre><span class="nx">dropbox</span><span class="p">.</span><span class="nx">requestToken</span><span class="p">();</span>
-</pre>
-</div>
-
+<div class="highlight"><pre><span class="nx">dropbox</span><span class="p">.</span><span class="nx">requestToken</span><span class="p">();</span>
+</pre></div>
 
 <p>b) User must visit the url to grant authorization to the client</p>
 
-<div class="highlight">
-<pre><span class="nx">dropbox</span><span class="p">.</span><span class="nx">authorizeUrl</span><span class="p">();</span>
-</pre>
-</div>
-
+<div class="highlight"><pre><span class="nx">dropbox</span><span class="p">.</span><span class="nx">authorizeUrl</span><span class="p">();</span>
+</pre></div>
 
 <p>c) Generate our access token</p>
 
-<div class="highlight">
-<pre><span class="nx">dropbox</span><span class="p">.</span><span class="nx">accessToken</span><span class="p">();</span>
-</pre>
-</div>
-
+<div class="highlight"><pre><span class="nx">dropbox</span><span class="p">.</span><span class="nx">accessToken</span><span class="p">();</span>
+</pre></div>
 
 <h4>Step 3</h4>
 
 <p>Now we can access to the api functionality.</p>
 
-<div class="highlight">
-<pre><span class="nx">dropbox</span><span class="p">.</span><span class="nx">accountInfo</span><span class="p">(</span><span class="nx">callbackFunction</span><span class="p">);</span>
-</pre>
-</div>
-
+<div class="highlight"><pre><span class="nx">dropbox</span><span class="p">.</span><span class="nx">accountInfo</span><span class="p">(</span><span class="nx">callbackFunction</span><span class="p">);</span>
+</pre></div>
 
 <h2>Methods</h2>
 
@@ -138,17 +117,12 @@
 
 <h4>rm(path, [success, error])</h4>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Dropbox-js maintained by <a href="https://github.com/irachex">irachex</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/cleberar">cleberar</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-
+    <script src="javascripts/scale.fix.js"></script>
     
-
   </body>
 </html>
